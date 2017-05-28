@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        // Built by LucyBot. www.lucybot.com
+        var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+        url += '?' + $.param({
+            'api-key': "4324bdb3e45e4b3dbe242a91920359ea",
+            'q': "Broken Window Theory"
+        });
+        $.ajax({
+            url: url,
+            method: 'GET',
+        }).done(function(result) {
+            document.getElementById("headline").innerHTML = result.response.docs["0"].headline.main;
+            document.getElementById("headline2").innerHTML = result.response.docs["1"].headline.main;
+            document.getElementById("web_url").innerHTML = result.response.docs["0"].web_url;
+            console.log(result);
+        }).fail(function(err) {
+            throw err;
+        });
+    </script>
+    </head>
+    
+    <body>
+        <h1>New York Times Articles: "Broken Window Theory"</h1>
+        <h2 id = "headline"><a href"..." id = "web_url"></h2>
+        <h2 id = "headline2"></h2>
+    </body>
+</html>
