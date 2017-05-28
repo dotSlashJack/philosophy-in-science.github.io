@@ -10,9 +10,9 @@
 	        	<li><a href="https://dotslashjack.github.io/philosophy-in-science.github.io/NYT.html">nyt</a></li>
     		</ul>
 		</nav>
-		<button onclick="func()">BUTTON</button>
+		<button onclick="func()">Show Twitter Account</button>
 		<div id="customTwitter">
-			TEST
+			TWITTER STREAM HERE
 		</div>
 	</body>
 	
@@ -22,11 +22,11 @@
     	
    	function func(){
         	var d = document.getElementById('customTwitter');
-        	if(d.style.display === 'hidden'){
-        	d.style.display = 'visible';
+        	if(d.style.visibility === 'hidden'){
+        	d.style.visibility = 'visible';
         }
         else{
-        	d.style.display = 'hidden';
+        	d.style.visibility = 'hidden';
         }
     
     }
