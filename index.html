@@ -10,5 +10,24 @@
 	        	<li><a href="https://dotslashjack.github.io/philosophy-in-science.github.io/NYT.html">nyt</a></li>
     		</ul>
 		</nav>
+		<button onclick="func()">BUTTON</button>
+		<div id="customTwitter">
+			TEST
+		</div>
 	</body>
+	
+
+	<script type="text/javascript" src="/scripts/emailpage.js">
+    	//TODO: check the source location
+   	function func(){
+        	var d = document.getElementById('customTwitter');
+        	if(d.style.display === 'none'){
+        	d.style.display = 'block';
+        }
+        else{
+        	d.style.display = 'none';
+        }
+    
+    }
+</script>
 </html>
